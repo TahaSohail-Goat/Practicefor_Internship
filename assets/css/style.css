@@ -1,0 +1,44 @@
+:root {
+    color-scheme: light;
+    --bg: #4535eb;
+    --card: #1d71a8;
+    --text: #a3ffd0;
+    --muted: #d8f5e7;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, var(--bg), #eadccf);
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+}
+
+.hero {
+    width: min(92vw, 720px);
+    padding: 48px 32px;
+    background: var(--card);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 24px;
+    box-shadow: 0 18px 50px rgba(31, 26, 23, 0.12);
+    text-align: center;
+}
+
+.hero h1 {
+    margin: 0 0 12px;
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    letter-spacing: 0.02em;
+}
+
+.hero p {
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--muted);
+}
