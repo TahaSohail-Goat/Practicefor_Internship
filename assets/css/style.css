@@ -15,9 +15,34 @@ body {
     min-height: 100vh;
     display: grid;
     place-items: center;
+    gap: 18px;
     background: linear-gradient(135deg, var(--bg), #eadccf);
     font-family: Arial, Helvetica, sans-serif;
     color: var(--text);
+}
+
+.page-header {
+    position: fixed;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.top-button {
+    border: none;
+    padding: 12px 22px;
+    border-radius: 999px;
+    background: #1976d2;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 10px 24px rgba(25, 118, 210, 0.35);
+}
+
+.top-button:hover {
+    background: #1565c0;
 }
 
 .hero {
