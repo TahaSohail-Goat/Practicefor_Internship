@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taha Sohail | Home</title>
+    <script>
+        (() => {
+            const storageKey = "portfolio-theme";
+            const savedTheme = localStorage.getItem(storageKey);
+            const systemTheme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+            document.documentElement.dataset.theme = savedTheme || systemTheme;
+        })();
+    </script>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
