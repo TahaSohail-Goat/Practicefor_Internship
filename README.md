@@ -35,6 +35,13 @@ This project does not require any installation or build step.
 2. Install the Live Server extension if needed.
 3. Right-click `index.html` and select **Open with Live Server**.
 
+## Setup Notes
+
+- Make sure the `assets/css/style.css` and `assets/js/main.js` files stay linked in `index.html`.
+- Use the `assets/images` folder for any future images or profile pictures.
+- If you add new pages, keep the file structure organized inside the project folder.
+- Commit changes regularly if you are pushing the project to GitHub.
+
 ## Project Structure
 
 ```text
