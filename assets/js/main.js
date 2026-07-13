@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	};
 
 	const savedTheme = window.localStorage.getItem(storageKey);
-	const initialTheme = savedTheme || getSystemTheme();
+	const initialTheme = savedTheme || root.getAttribute("data-theme") || getSystemTheme();
 
 	applyTheme(initialTheme);
 
