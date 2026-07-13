@@ -1,5 +1,4 @@
-@'
----
+﻿---
 name: Bug report
 about: Report something broken
 title: "fix: "
@@ -14,4 +13,3 @@ What went wrong?
 2. 
 
 ## Expected vs actual behavior
-'@ | Out-File -FilePath .github/ISSUE_TEMPLATE/bug_report.md -Encoding utf8

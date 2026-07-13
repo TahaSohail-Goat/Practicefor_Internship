@@ -1,5 +1,4 @@
-@'
----
+﻿---
 name: Feature request
 about: Suggest a new feature or improvement
 title: "feat: "
@@ -15,4 +14,3 @@ What problem does this solve?
 
 ## Validation
 How will this be tested?
-'@ | Out-File -FilePath .github/ISSUE_TEMPLATE/feature_request.md -Encoding utf8
