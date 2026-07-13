@@ -1,9 +1,49 @@
 :root {
     color-scheme: light;
-    --bg: #4535eb;
-    --card: #1d71a8;
-    --text: #a3ffd0;
-    --muted: #d8f5e7;
+    --bg-start: #4535eb;
+    --bg-end: #eadccf;
+    --surface: #1d71a8;
+    --surface-border: rgba(255, 255, 255, 0.12);
+    --text-primary: #f5fbff;
+    --text-secondary: #d8f5e7;
+    --button-bg: #1976d2;
+    --button-bg-hover: #1565c0;
+    --button-text: #ffffff;
+    --button-shadow: rgba(25, 118, 210, 0.35);
+}
+
+:root[data-theme="light"] {
+    color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg-start: #081226;
+    --bg-end: #111827;
+    --surface: #111d33;
+    --surface-border: rgba(148, 163, 184, 0.18);
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --button-bg: #3b82f6;
+    --button-bg-hover: #2563eb;
+    --button-text: #ffffff;
+    --button-shadow: rgba(59, 130, 246, 0.28);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: dark;
+        --bg-start: #081226;
+        --bg-end: #111827;
+        --surface: #111d33;
+        --surface-border: rgba(148, 163, 184, 0.18);
+        --text-primary: #f8fafc;
+        --text-secondary: #cbd5e1;
+        --button-bg: #3b82f6;
+        --button-bg-hover: #2563eb;
+        --button-text: #ffffff;
+        --button-shadow: rgba(59, 130, 246, 0.28);
+    }
 }
 
 * {
@@ -16,9 +56,9 @@ body {
     display: grid;
     place-items: center;
     gap: 18px;
-    background: linear-gradient(135deg, var(--bg), #eadccf);
+    background: linear-gradient(135deg, var(--bg-start), var(--bg-end));
     font-family: Arial, Helvetica, sans-serif;
-    color: var(--text);
+    color: var(--text-primary);
 }
 
 .page-header {
@@ -33,23 +73,28 @@ body {
     border: none;
     padding: 12px 22px;
     border-radius: 999px;
-    background: #1976d2;
-    color: #ffffff;
+    background: var(--button-bg);
+    color: var(--button-text);
     font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
-    box-shadow: 0 10px 24px rgba(25, 118, 210, 0.35);
+    box-shadow: 0 10px 24px var(--button-shadow);
 }
 
 .top-button:hover {
-    background: #1565c0;
+    background: var(--button-bg-hover);
+}
+
+.top-button:focus-visible {
+    outline: 3px solid rgba(255, 255, 255, 0.8);
+    outline-offset: 3px;
 }
 
 .hero {
     width: min(92vw, 720px);
     padding: 48px 32px;
-    background: var(--card);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: var(--surface);
+    border: 1px solid var(--surface-border);
     border-radius: 24px;
     box-shadow: 0 18px 50px rgba(31, 26, 23, 0.12);
     text-align: center;
@@ -65,5 +110,5 @@ body {
     margin: 0;
     font-size: 1.1rem;
     line-height: 1.7;
-    color: var(--muted);
+    color: var(--text-secondary);
 }
